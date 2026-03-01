@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="#-features"><img src="https://img.shields.io/badge/Features-0A1F33?style=for-the-badge&logo=home&logoColor=white"/></a> •
-  <a href="#-live-demo"><img src="https://img.shields.io/badge/Live_Demo-FF6B00?style=for-the-badge&logo=vercel&logoColor=white"/></a> •
+  <a href="#-live-demo"><img src="https://img.shields.io/badge/Live_Demo-FF6B00?style=for-the-badge&logo=github&logoColor=white"/></a> •
   <a href="#-installation"><img src="https://img.shields.io/badge/Installation-0A1F33?style=for-the-badge&logo=package&logoColor=white"/></a>
 </p>
 
@@ -16,7 +16,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Gemini AI](https://img.shields.io/badge/Gemini-AI-8E75B2?style=flat-square&logo=google)](https://deepmind.google/technologies/gemini/)
 [![Pexels](https://img.shields.io/badge/Pexels-API-05A081?style=flat-square&logo=pexels)](https://www.pexels.com/api/)
-[![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=flat-square&logo=vercel)](https://vercel.com)
+[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-222222?style=flat-square&logo=github)](https://pages.github.com/)
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=22&duration=3000&pause=1000&color=FF6B00&center=true&vCenter=true&width=600&lines=Chat+with+Gemini+AI+Assistant;Upload+Images+for+Analysis;Search+Real+Photos+with+Pexels;Upload+%7C+Generate+%7C+Let's+Chat;Smart+Context+Management;Built+with+React+19+%26+Context+API" alt="Typing SVG" />
@@ -38,7 +38,7 @@
 | [📦 Installation](#-installation) | Setup and configuration guide |
 | [📁 Project Structure](#-project-structure) | File organization |
 | [🔌 APIs Used](#-apis-used) | External services integration |
-| [🚀 Deploy to Vercel](#-deploy-to-vercel) | Deployment guide |
+| [🚀 Deploy to GitHub Pages](#-deploy-to-github-pages) | Deployment guide |
 | [📄 License](#-license) | MIT License |
 
 </div>
@@ -70,7 +70,7 @@
 
 ### 🌐 **Experience Live**
 
-**👉 [https://smart-ai-bot.vercel.app/](https://smart-ai-bot.vercel.app/)**
+**👉 [https://feezakulsoom.github.io/smart-aibot/](https://feezakulsoom.github.io/smart-aibot/)**
 
 | Mode | Function |
 |------|----------|
@@ -111,8 +111,8 @@
       <br><sub>Build Tool</sub>
     </td>
     <td align="center" width="120">
-      <img src="https://skillicons.dev/icons?i=vercel" width="60" height="60" alt="Vercel" />
-      <br><b>Vercel</b>
+      <img src="https://skillicons.dev/icons?i=github" width="60" height="60" alt="GitHub" />
+      <br><b>GitHub Pages</b>
       <br><sub>Deployment</sub>
     </td>
   </tr>
@@ -128,7 +128,7 @@
 | 🎨 **Icons** | React Icons (Ri, Lu, Md, Fi, Fa) |
 | 💾 **Storage** | Session Storage API |
 | 🎭 **Animations** | CSS Keyframes & Transitions |
-| 🌍 **Deployment** | Vercel |
+| 🌍 **Deployment** | GitHub Pages |
 
 </div>
 
@@ -147,10 +147,10 @@
 
 ```bash
 # 1️⃣ Clone the repository
-git clone https://github.com/FEEZAKULSOOM/smart-ai-bot.git
+git clone https://github.com/FEEZAKULSOOM/smart-aibot.git
 
 # 2️⃣ Navigate to project directory
-cd smart-ai-bot
+cd smart-aibot
 
 # 3️⃣ Install dependencies
 npm install
@@ -177,7 +177,7 @@ const Api_Url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-
 ## 📁 Project Structure
 
 ```
-📦 smart-ai-bot/
+📦 smart-aibot/
 ├── 📂 public/
 ├── 📂 src/
 │   ├── 📂 components/
@@ -265,57 +265,45 @@ fetch(`https://api.pexels.com/v1/search?query=nature&per_page=1`, {
 
 ---
 
-## 🚀 Deploy to Vercel
+## 🚀 Deploy to GitHub Pages
 
-### Option 1: One-Click Deploy
+### Step 1: Update vite.config.js
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/FEEZAKULSOOM/smart-ai-bot)
-
-### Option 2: Manual Deploy
-
-```bash
-# 1️⃣ Install Vercel CLI
-npm install -g vercel
-
-# 2️⃣ Deploy to Vercel
-vercel
-
-# 3️⃣ Follow the prompts:
-#   - Set up and deploy: Y
-#   - Which scope: Select your account
-#   - Link to existing project: N
-#   - Project name: smart-ai-bot
-#   - Directory: ./
-#   - Override settings: N
-
-# 4️⃣ For production deploy:
-vercel --prod
-```
-
-### Option 3: Git Integration
-
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Click "Add New Project"
-4. Import your GitHub repository
-5. Click "Deploy"
-
-### Environment Variables (Optional)
-
-If you want to secure your API keys:
-
-```bash
-# In Vercel dashboard → Project Settings → Environment Variables
-VITE_GEMINI_API_KEY=your_key_here
-VITE_PEXELS_API_KEY=your_key_here
-```
-
-Then update your code:
 ```js
-const PEXELS_API_KEY = import.meta.env.VITE_PEXELS_API_KEY;
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  base: '/smart-aibot/' // Your repository name
+})
 ```
 
-Your app will be live at: **https://smart-ai-bot.vercel.app** 🎉
+### Step 2: Install gh-pages
+
+```bash
+npm install --save-dev gh-pages
+```
+
+### Step 3: Update package.json
+
+```json
+{
+  "homepage": "https://feezakulsoom.github.io/smart-aibot",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}
+```
+
+### Step 4: Deploy
+
+```bash
+npm run deploy
+```
+
+Your app will be live at: **https://feezakulsoom.github.io/smart-aibot** 🎉
 
 ---
 
@@ -329,7 +317,7 @@ MIT License © 2026 **Smart AI Bot**
 
 If you like this project, consider giving it a ⭐ on GitHub!
 
-[![GitHub stars](https://img.shields.io/github/stars/FEEZAKULSOOM/smart-ai-bot?style=social)](https://github.com/FEEZAKULSOOM/smart-aibot)
+[![GitHub stars](https://img.shields.io/github/stars/FEEZAKULSOOM/smart-aibot?style=social)](https://github.com/FEEZAKULSOOM/smart-aibot)
 
 ---
 
