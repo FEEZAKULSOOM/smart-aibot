@@ -327,9 +327,9 @@ MIT License © 2026 **Smart AI Bot**
 
 ### 🌟 **Show your support**
 
-If you like this project, please consider giving it a ⭐ on GitHub!
+If you like this project, consider giving it a ⭐ on GitHub!
 
-[![GitHub stars](https://img.shields.io/github/stars/FEEZAKULSOOM/smart-ai-bot?style=social)](https://github.com/FEEZAKULSOOM/smart-ai-bot)
+[![GitHub stars](https://img.shields.io/github/stars/FEEZAKULSOOM/smart-ai-bot?style=social)](https://github.com/FEEZAKULSOOM/smart-aibot)
 
 ---
 
