@@ -1,0 +1,348 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  padding: 10px 30px;
+  font-size: 30px;
+}
+
+.hero {
+  width: 100%;
+  height: 70%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+
+}
+
+#tag {
+  font-size: 2vmax;
+
+
+}
+
+.cate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.upImg,
+.genImg,
+.chat {
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 17px;
+
+}
+
+.upImg svg {
+  width: 25px;
+  height: 25px;
+  color: rgba(7, 240, 11);
+}
+
+.genImg svg {
+  width: 25px;
+  height: 25px;
+  color: rgb(32, 204, 187);
+}
+
+.chat svg {
+  width: 25px;
+  height: 25px;
+  color: rgb(228, 199, 32);
+}
+
+.upImg:hover,
+.genImg:hover,
+.chat:hover,
+#add:hover,
+#submit:hover {
+  background-color: rgba(240, 248, 255, 0.112);
+}
+
+.input-box {
+  width: 100%;
+  height: calc(100vh - 80px - 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0px 20px;
+  position: fixed;
+  bottom: 0;
+
+
+}
+
+#add,
+#submit {
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.114);
+  border-radius: 50px;
+  background-color: rgb(11, 16, 17);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+#submit svg {
+  width: 25px;
+  height: 25px;
+
+}
+
+#add svg {
+  width: 30px;
+  height: 30px;
+
+}
+
+form input {
+  width: calc(100% - 120px);
+  height: 60px;
+  background-color: rgb(11, 16, 17);
+  border: 2px solid rgba(255, 255, 255, 0.114);
+  outline: none;
+  border-radius: 30px;
+  max-width: 60%;
+  padding: 10px 20px;
+  color: white;
+  font-size: 19px;
+
+
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.chat-page {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  overflow-y: auto;
+
+}
+
+.user,
+.ai {
+  width: 90%;
+  padding: 20px 30px;
+  color: white;
+  background-color: rgb(11, 16, 17);
+  border: 2px solid rgba(255, 255, 255, 0.114);
+  border-radius: 20px;
+  font-size: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 20px;
+  scrollbar-width: none;
+
+
+}
+
+#inputImage {
+  height: 100px;
+  border-radius: 20px;
+  position: absolute;
+
+  left: 15%;
+  bottom: 100px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 255, 0.285);
+
+}
+
+.user img {
+  max-width: 300px;
+  width: 90%;
+  border-radius: 20px;
+
+}
+
+.ai img {
+  max-width: 300px;
+  width: 90%;
+  border-radius: 20px;
+
+}
+
+.popup {
+  width: 200px;
+  height: 120px;
+  position: absolute;
+  bottom: 90px;
+  left: 15%;
+  background-color: rgb(11, 16, 17);
+  border: 2px solid rgba(255, 255, 255, 0.114);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: column;
+
+
+  padding: 8px;
+
+}
+
+.select-up,
+.select-gen {
+
+  color: white;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 20px;
+
+
+
+
+}
+
+.select-up:hover,
+.select-gen:hover {
+
+  background-color: rgba(240, 248, 255, 0.112);
+}
+
+.select-up svg {
+  color: rgba(7, 240, 11);
+  width: 25px;
+  height: 25px;
+
+
+}
+
+.select-gen svg {
+  color: rgb(32, 204, 187);
+  width: 25px;
+  height: 25px;
+
+
+}
+
+#genImg {
+  color: rgb(32, 204, 187);
+
+}
+
+
+
+@media (max-width:500px) {
+  #tag {
+    font-size: 20px;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.chat-page::-webkit-scrollbar,
+.hero::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.chat-page,
+.hero {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+
+/* Tablet adjustment */
+@media screen and (max-width: 768px) {
+  .popup {
+    bottom: 140px !important;
+  }
+
+  #inputImage {
+    bottom: 140px !important;
+  }
+}
+
+/* Mobile adjustment */
+@media screen and (max-width: 500px) {
+  .popup {
+    bottom: 140px !important;
+  }
+
+  #inputImage {
+    bottom: 140px !important;
+  }
+}
+
+/* Small mobile adjustment */
+@media screen and (max-width: 400px) {
+  .popup {
+    bottom: 140px !important;
+  }
+
+  #inputImage {
+    bottom: 140px !important;
+  }
+}
+
+/* Landscape adjustment */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .popup {
+    bottom: 140px !important;
+  }
+
+  #inputImage {
+    bottom: 140px !important;
+  }
+}
+
+@media screen and (min-width: 782px) {
+  .popup {
+    bottom: 140px !important;
+  }
+
+  #inputImage {
+    bottom: 140px !important;
+  }
+}
